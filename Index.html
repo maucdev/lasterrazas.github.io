@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTurismo Comunitario | Naturaleza y Cultura</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://static.photos/nature/1200x630/42');
+            background-size: cover;
+            background-position: center;
+        }
+        .experience-card:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        .testimonial-card {
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0 flex items-center">
+                        <i data-feather="compass" class="h-8 w-8 text-green-600"></i>
+                        <span class="ml-2 text-xl font-bold text-gray-800">EcoComunidad</span>
+                    </a>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#" class="text-green-600 px-3 py-2 text-sm font-medium">Inicio</a>
+                    <a href="#experiencias" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Experiencias</a>
+                    <a href="#comunidades" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Comunidades</a>
+                    <a href="#testimonios" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Testimonios</a>
+                    <a href="#contacto" class="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700">Contacto</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-bg h-screen flex items-center justify-center text-white pt-16">
+        <div class="text-center px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Descubre la Magia del Turismo Rural</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Vive experiencias auténticas en las comunidades locales mientras preservamos la naturaleza juntos.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#experiencias" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg">Explorar Experiencias</a>
+                <a href="#contacto" class="bg-transparent hover:bg-white hover:text-green-700 text-white font-bold py-3 px-6 border-2 border-white rounded-lg">Contactar Ahora</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center" data-aos="fade-up">
+                <h2 class="text-base text-green-600 font-semibold tracking-wide uppercase">Sobre Nosotros</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Turismo con Propósito
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Conectamos viajeros con comunidades rurales para crear experiencias transformadoras que benefician a todos.
+                </p>
+            </div>
+
+            <div class="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="bg-gray-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                        <i data-feather="heart"></i>
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="text-lg font-medium text-gray-900">Impacto Social</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            El 80% de los ingresos van directamente a las familias y proyectos comunitarios.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                        <i data-feather="globe"></i>
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="text-lg font-medium text-gray-900">Sostenibilidad</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Prácticas ecoamigables que protegen los ecosistemas locales.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                        <i data-feather="users"></i>
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="text-lg font-medium text-gray-900">Autenticidad</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Experiencias diseñadas y guiadas por los miembros de la comunidad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiences Section -->
+    <section id="experiencias" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="text-base text-green-600 font-semibold tracking-wide uppercase">Nuestras Experiencias</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Vive la Naturaleza con la Comunidad
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Experience 1 -->
+                <div class="experience-card bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <img class="w-full h-48 object-cover" src="http://static.photos/nature/640x360/101" alt="Senderismo">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Naturaleza</span>
+                            <span class="ml-2 text-gray-500 text-sm">3 días</span>
+                        </div>
+                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Senderismo Ancestral</h3>
+                        <p class="mt-3 text-base text-gray-500">
+                            Recorre antiguos caminos indígenas con guías locales, conoce plantas medicinales y duerme en cabañas tradicionales.
+                        </p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-lg font-bold text-green-600">$120 USD</span>
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="experience-card bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <img class="w-full h-48 object-cover" src="http://static.photos/food/640x360/202" alt="Gastronomía">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Gastronomía</span>
+                            <span class="ml-2 text-gray-500 text-sm">1 día</span>
+                        </div>
+                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Taller de Cocina Tradicional</h3>
+                        <p class="mt-3 text-base text-gray-500">
+                            Aprende recetas centenarias con ingredientes locales cosechados ese mismo día en la huerta comunitaria.
+                        </p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-lg font-bold text-green-600">$65 USD</span>
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="experience-card bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <img class="w-full h-48 object-cover" src="http://static.photos/people/640x360/303" alt="Artesanía">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Cultura</span>
+                            <span class="ml-2 text-gray-500 text-sm">2 días</span>
+                        </div>
+                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Taller de Artesanías</h3>
+                        <p class="mt-3 text-base text-gray-500">
+                            Crea piezas únicas con técnicas ancestrales usando materiales naturales bajo la guía de maestros artesanos.
+                        </p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-lg font-bold text-green-600">$85 USD</span>
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center" data-aos="fade-up">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700">
+                    Ver todas las experiencias
+                    <i data-feather="arrow-right" class="ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Communities Section -->
+    <section id="comunidades" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center" data-aos="fade-up">
+                <h2 class="text-base text-green-600 font-semibold tracking-wide uppercase">Comunidades</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Conoce Nuestras Comunidades Aliadas
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Cada comunidad tiene su propia identidad, tradiciones y formas de recibirte como huésped.
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <img class="mx-auto h-32 w-32 rounded-full" src="http://static.photos/people/200x200/501" alt="Comunidad Andina">
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Comunidad Andina</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Guardianes de los páramos y conocimientos ancestrales sobre agricultura en altura.
+                    </p>
+                </div>
+
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <img class="mx-auto h-32 w-32 rounded-full" src="http://static.photos/people/200x200/502" alt="Comunidad Amazónica">
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Comunidad Amazónica</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Expertos en biodiversidad y medicina tradicional de la selva tropical.
+                    </p>
+                </div>
+
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <img class="mx-auto h-32 w-32 rounded-full" src="http://static.photos/people/200x200/503" alt="Comunidad Costera">
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Comunidad Costera</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Pescadores artesanales que comparten su conexión con el océano y manglares.
+                    </p>
+                </div>
+
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <img class="mx-auto h-32 w-32 rounded-full" src="http://static.photos/people/200x200/504" alt="Comunidad del Valle">
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Comunidad del Valle</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Agricultores orgánicos que mantienen viva la tradición de los mercados campesinos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="text-base text-green-600 font-semibold tracking-wide uppercase">Testimonios</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Lo que dicen nuestros viajeros
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="testimonial-card bg-white p-8 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="http://static.photos/people/200x200/601" alt="María G.">
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">María G.</h3>
+                            <p class="text-gray-500">España</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-600 italic">
+                            "La experiencia con la comunidad andina cambió mi perspectiva sobre el turismo. Aprendí más en esos tres días que en años de viajes convencionales."
+                        </p>
+                    </div>
+                    <div class="mt-4 flex text-yellow-400">
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                </div>
+
+                <div class="testimonial-card bg-white p-8 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="http://static.photos/people/200x200/602" alt="John T.">
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">John T.</h3>
+                            <p class="text-gray-500">Estados Unidos</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-600 italic">
+                            "El taller de cocina fue increíble. No solo aprendimos recetas, sino la filosofía detrás de cada ingrediente. Ahora cocino diferente en casa."
+                        </p>
+                    </div>
+                    <div class="mt-4 flex text-yellow-400">
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                </div>
+
+                <div class="testimonial-card bg-white p-8 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="http://static.photos/people/200x200/603" alt="Ana L.">
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Ana L.</h3>
+                            <p class="text-gray-500">México</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-600 italic">
+                            "Ver cómo mi visita contribuía directamente a la escuela local me hizo sentir que estaba viajando de la manera correcta. Volveré pronto."
+                        </p>
+                    </div>
+                    <div class="mt-4 flex text-yellow-400">
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-green-700">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+            <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl" data-aos="fade-right">
+                <span class="block">¿Listo para vivir una experiencia transformadora?</span>
+                <span class="block text-green-200">Contacta a nuestro equipo hoy mismo.</span>
+            </h2>
+            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0" data-aos="fade-left">
+                <div class="inline-flex rounded-md shadow">
+                    <a href="#contacto" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-green-600 bg-white hover:bg-green-50">
+                        Planificar mi viaje
+                    </a>
+                </div>
+                <div class="ml-3 inline-flex rounded-md shadow">
+                    <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-800">
+                        <i data-feather="phone" class="mr-2"></i>
+                        +593 99 123 4567
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center" data-aos="fade-up">
+                <h2 class="text-base text-green-600 font-semibold tracking-wide uppercase">Contacto</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Hablemos de tu próxima aventura
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Nuestro equipo está listo para ayudarte a planificar la experiencia perfecta según tus intereses.
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
+                <div class="bg-gray-50 p-8 rounded-lg" data-aos="fade-right">
+                    <h3 class="text-lg font-medium text-gray-900">Información de contacto</h3>
+                    <div class="mt-6 space-y-4">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <i data-feather="map-pin" class="h-6 w-6 text-green-600"></i>
+                            </div>
+                            <div class="ml-3 text-base text-gray-500">
+                                <p>Av. Amazonas N45-12</p>
+                                <p>Quito, Ecuador</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <i data-feather="mail" class="h-6 w-6 text-green-600"></i>
+                            </div>
+                            <div class="ml-3 text-base text-gray-500">
+                                <p>hola@ecocomunidad.com</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <i data-feather="phone" class="h-6 w-6 text-green-600"></i>
+                            </div>
+                            <div class="ml-3 text-base text-gray-500">
+                                <p>+593 2 123 4567</p>
+                                <p>+593 99 123 4567 (WhatsApp)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-lg font-medium text-gray-900">Síguenos</h3>
+                        <div class="mt-4 flex space-x-6">
+                            <a href="#" class="text-gray-400 hover:text-green-600">
+                                <i data-feather="facebook" class="h-6 w-6"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-green-600">
+                                <i data-feather="instagram" class="h-6 w-6"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-green-600">
+                                <i data-feather="twitter" class="h-6 w-6"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-green-600">
+                                <i data-feather="youtube" class="h-6 w-6"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <form action="#" method="POST" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                        <div>
+                            <label for="first-name" class="block text-sm font-medium text-gray-700">Nombre</label>
+                            <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-1 py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md">
+                        </div>
+                        <div>
+                            <label for="last-name" class="block text-sm font-medium text-gray-700">Apellido</label>
+                            <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="mt-1 py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md">
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" name="email" id="email" autocomplete="email" class="mt-1 py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md">
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label for="phone" class="block text-sm font-medium text-gray-700">Teléfono</label>
+                            <input type="text" name="phone" id="phone" autocomplete="tel" class="mt-1 py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md">
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label for="message" class="block text-sm font-medium text-gray-700">Mensaje</label>
+                            <textarea id="message" name="message" rows="4" class="mt-1 py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"></textarea>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                                Enviar Mensaje
+                                <i data-feather="send" class="ml-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Experiencias</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Senderismo</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Gastronomía</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Artesanías</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Avistamiento</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Comunidades</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Andina</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Amazónica</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Costera</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Del Valle</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Empresa</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Sobre Nosotros</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Impacto</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Trabaja con Nosotros</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Legal</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Políticas</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Términos</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Privacidad</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+                <div class="flex space-x-6 md:order-2">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i data-feather="facebook" class="h-6 w-6"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i data-feather="instagram" class="h-6 w-6"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i data-feather="twitter" class="h-6 w-6"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i data-feather="youtube" class="h-6 w-6"></i>
+                    </a>
+                </div>
+                <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+                    &copy; 2023 EcoTurismo Comunitario. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
