@@ -8,9 +8,96 @@
     feather.replace();
 
     // Mobile menu toggle
-    document.getElementById('mobile-menu-button')?.addEventListener('click', function() {
-        // ... tu código del menú móvil ...
-    });
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-    // Carousel (solo si está en index.html, puedes moverlo a un archivo separado si lo usas en más páginas)
+        mobileMenuButton.addEventListener('click', function() {
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !expanded);
+            mobileMenu.classList.toggle('hidden');
+            
+            // Change icon between menu and x
+            const icon = this.querySelector('i');
+            if (expanded) {
+                icon.setAttribute('data-feather', 'menu');
+            } else {
+                icon.setAttribute('data-feather', 'x');
+            }
+            feather.replace();
+        });
+
+        // Carousel functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            const prevBtn = document.querySelector('.carousel-prev');
+            const nextBtn = document.querySelector('.carousel-next');
+            let currentSlide = 0;
+            let autoSlideInterval;
+
+            function showSlide(index) {
+                // Hide all slides
+                slides.forEach(slide => {
+                    slide.style.opacity = '0';
+                });
+                dots.forEach(dot => {
+                    dot.style.opacity = '0.5';
+                });
+                
+                // Show current slide
+                slides[index].style.opacity = '1';
+                dots[index].style.opacity = '1';
+                
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                let nextIndex = (currentSlide + 1) % slides.length;
+                showSlide(nextIndex);
+            }
+
+            function prevSlide() {
+                let prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(prevIndex);
+            }
+
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(nextSlide, 5000);
+            }
+
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+
+            // Event listeners
+            nextBtn.addEventListener('click', function() {
+                stopAutoSlide();
+                nextSlide();
+                startAutoSlide();
+            });
+
+            prevBtn.addEventListener('click', function() {
+                stopAutoSlide();
+                prevSlide();
+                startAutoSlide();
+            });
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    stopAutoSlide();
+                    const slideIndex = parseInt(this.getAttribute('data-slide'));
+                    showSlide(slideIndex);
+                    startAutoSlide();
+                });
+            });
+
+            // Pause auto slide on hover
+            const carousel = document.querySelector('.carousel-container');
+            carousel.addEventListener('mouseenter', stopAutoSlide);
+            carousel.addEventListener('mouseleave', startAutoSlide);
+
+            // Initialize and start auto slide
+            showSlide(0);
+            startAutoSlide();
+        });
 </script>
