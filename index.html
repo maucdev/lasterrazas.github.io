@@ -522,10 +522,32 @@
     </section>
 
     <div id="footer-container"></div>
-    <div id="scripts-container"></div>
     <script src="assets/js/layout.js"></script>
-    <script
-     // Carousel functionality
+    <script>
+    // Tu código de inicialización
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+    feather.replace();
+
+    // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', function() {
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !expanded);
+            mobileMenu.classList.toggle('hidden');
+            
+            // Change icon between menu and x
+            const icon = this.querySelector('i');
+            if (expanded) {
+                icon.setAttribute('data-feather', 'menu');
+            } else {
+                icon.setAttribute('data-feather', 'x');
+            }
+            feather.replace();
+        });
+
+        // Carousel functionality
         document.addEventListener('DOMContentLoaded', function() {
             const slides = document.querySelectorAll('.carousel-slide');
             const dots = document.querySelectorAll('.carousel-dot');
@@ -599,9 +621,11 @@
             showSlide(0);
             startAutoSlide();
         });
-    </script>
+</script>
+
 </body>
 </html>
+
 
 
 
