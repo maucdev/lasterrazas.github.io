@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Las Terrazas</title>
     <!--<base href="./"> -->
+    <!-- Librerías (cargadas manualmente) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    /* Estilos personalizados */
     <style>
         .hero-bg {
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/fondo1.jpg');
@@ -22,7 +24,10 @@
     </style>
 </head>
 <body class="font-sans bg-gray-50" data-base-path="./">
+    <!-- Contenedores para el layout -->
     <div id="header-container"></div>
+    
+    <!-- ... todo el contenido de la página ... -->
     <!-- Hero Section with Image Carousel -->
     <div class="relative h-screen pt-16">
         <!-- Carousel Container -->
@@ -522,13 +527,18 @@
     </section>
 
     <div id="footer-container"></div>
-    <script src="assets/js/layout.js"></script>
-    <script>
-    // Tu código de inicialización
-    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
-    feather.replace();
 
-    // Mobile menu toggle
+    <!--  Script de inicialización personalizado -->
+    <script>
+        // Inicializa todo después de que el DOM y los partials estén listos
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializa Feather Icons para el header/footer
+            feather.replace();
+
+            // Inicializa AOS
+            AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+
+        // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -621,10 +631,13 @@
             showSlide(0);
             startAutoSlide();
         });
-</script>
+    </script>
+    
+    <script src="assets/js/layout.js"></script>
 
 </body>
 </html>
+
 
 
 
