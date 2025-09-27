@@ -527,15 +527,14 @@
 
     <div id="footer-container"></div>
 
-    <!--  Script de inicialización personalizado -->
-    <script>
-        // Inicializa todo después de que el DOM y los partials estén listos
-        document.addEventListener('DOMContentLoaded', function() {
-            // Inicializa Feather Icons para el header/footer
-            feather.replace();
+ <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
 
-            // Inicializa AOS
-            AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+        feather.replace();
 
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -636,6 +635,7 @@
 
 </body>
 </html>
+
 
 
 
