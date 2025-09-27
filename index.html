@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoTurismo Comunitario | Naturaleza y Cultura</title>
+    <title>Las Terrazas</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <style>
         .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://static.photos/nature/1200x630/42');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/fondo1.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -31,14 +33,14 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <a href="#" class="flex-shrink-0 flex items-center">
-                        <i data-feather="compass" class="h-8 w-8 text-green-600"></i>
-                        <span class="ml-2 text-xl font-bold text-gray-800">EcoComunidad</span>
+                        <img src="images/terrazas-logo.png" alt="Las Terrazas Logo">
                     </a>
                 </div>
                 <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
                     <a href="#" class="text-green-600 px-3 py-2 text-sm font-medium">Inicio</a>
+                    <a href="#nosotros" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Nosotros</a>
                     <a href="#experiencias" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Experiencias</a>
-                    <a href="#comunidades" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Comunidades</a>
+                    <a href="#comunidad" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Comunidad</a>
                     <a href="#testimonios" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Testimonios</a>
                     <a href="#contacto" class="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700">Contacto</a>
                 </div>
@@ -52,8 +54,9 @@
             <div class="hidden md:hidden" id="mobile-menu">
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                     <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-green-600 bg-green-50">Inicio</a>
+                    <a href="#nosotros" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-green-600 hover:bg-green-50">Nosotros</a>
                     <a href="#experiencias" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-green-600 hover:bg-green-50">Experiencias</a>
-                    <a href="#comunidades" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-green-600 hover:bg-green-50">Comunidades</a>
+                    <a href="#comunidad" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-green-600 hover:bg-green-50">Comunidad</a>
                     <a href="#testimonios" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-green-600 hover:bg-green-50">Testimonios</a>
                     <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-green-600 hover:bg-green-700">Contacto</a>
                 </div>
@@ -62,20 +65,56 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="hero-bg h-screen flex items-center justify-center text-white pt-16">
-        <div class="text-center px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">Descubre la Magia del Turismo Rural</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Vive experiencias auténticas en las comunidades locales mientras preservamos la naturaleza juntos.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#experiencias" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg">Explorar Experiencias</a>
-                <a href="#contacto" class="bg-transparent hover:bg-white hover:text-green-700 text-white font-bold py-3 px-6 border-2 border-white rounded-lg">Contactar Ahora</a>
+    <!-- Hero Section with Image Carousel -->
+    <div class="relative h-screen pt-16">
+        <!-- Carousel Container -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="carousel-container relative w-full h-full">
+                <!-- Slide 1 -->
+                <div class="carousel-slide absolute inset-0 opacity-100 transition-opacity duration-1000">
+                    <div class="hero-bg w-full h-full" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/fondo1.jpg');"></div>    
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+                    <div class="hero-bg w-full h-full" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/fondo2.jpg');"></div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+                    <div class="hero-bg w-full h-full" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/fondo3.jpg');"></div>
+                </div>
             </div>
         </div>
+        
+        <!-- Content Overlay -->
+        <div class="relative h-full flex items-center justify-center text-white">
+            <div class="text-center px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Descubre la Magia del Turismo Rural</h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Vive experiencias auténticas en nuestra comunidad mientras preservamos la naturaleza juntos.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#experiencias" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg">Explorar Experiencias</a>
+                    <a href="#contacto" class="bg-transparent hover:bg-white hover:text-green-700 text-white font-bold py-3 px-6 border-2 border-white rounded-lg">Contactar Ahora</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Navigation -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
+            <button class="carousel-dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity" data-slide="0"></button>
+            <button class="carousel-dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity" data-slide="1"></button>
+            <button class="carousel-dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity" data-slide="2"></button>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full bg-black bg-opacity-30 hover:bg-opacity-50 transition-all">
+            <i data-feather="chevron-left" class="w-6 h-6"></i>
+        </button>
+        <button class="carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full bg-black bg-opacity-30 hover:bg-opacity-50 transition-all">
+            <i data-feather="chevron-right" class="w-6 h-6"></i>
+        </button>
     </div>
 
     <!-- About Section -->
-    <section class="py-20 bg-white">
+    <section id="nosotros" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center" data-aos="fade-up">
                 <h2 class="text-base text-green-600 font-semibold tracking-wide uppercase">Sobre Nosotros</h2>
@@ -83,7 +122,7 @@
                     Turismo con Propósito
                 </p>
                 <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                    Conectamos viajeros con comunidades rurales para crear experiencias transformadoras que benefician a todos.
+                    Somos una Experiencia Rural de Desarrollo Sostenible, situada dentro de la Reserva de la Biosfera Sierra del Rosario, provincia de Artemisa. Los atractivos del área nos han convertido en un destino turístico, orientado a la naturaleza y a la cultura. Ello entraña un compromiso con la conservación y control de este lugar; así como el respeto a la sociedad y la cultura local. 
                 </p>
             </div>
 
@@ -140,18 +179,18 @@
             <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 <!-- Experience 1 -->
                 <div class="experience-card bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
-                    <img class="w-full h-48 object-cover" src="http://static.photos/nature/640x360/101" alt="Senderismo">
+                    <img class="w-full h-48 object-cover" src="images/Senderismo.jpeg" alt="Senderismo">
                     <div class="p-6">
                         <div class="flex items-center">
                             <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Naturaleza</span>
-                            <span class="ml-2 text-gray-500 text-sm">3 días</span>
+                            <span class="ml-2 text-gray-500 text-sm">6 horas</span>
                         </div>
-                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Senderismo Ancestral</h3>
+                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Senderismo Guiado</h3>
                         <p class="mt-3 text-base text-gray-500">
-                            Recorre antiguos caminos indígenas con guías locales, conoce plantas medicinales y duerme en cabañas tradicionales.
+                            Los valores culturales, históricos y paisajísticos de la zona más occidental de cuba le despertará un gran interés. Contamos con variedad de excursiones.
                         </p>
                         <div class="mt-4 flex items-center justify-between">
-                            <span class="text-lg font-bold text-green-600">$120 USD</span>
+                           <!-- <span class="text-lg font-bold text-green-600">$20 USD</span>-->
                             <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
                         </div>
                     </div>
@@ -159,37 +198,92 @@
 
                 <!-- Experience 2 -->
                 <div class="experience-card bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="200">
-                    <img class="w-full h-48 object-cover" src="http://static.photos/food/640x360/202" alt="Gastronomía">
+                    <img class="w-full h-48 object-cover" src="images/Experiencia-Restaurante11.jpg" width="100" height="50" alt="Restaurantes">
                     <div class="p-6">
                         <div class="flex items-center">
                             <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Gastronomía</span>
-                            <span class="ml-2 text-gray-500 text-sm">1 día</span>
+                           <!-- <span class="ml-2 text-gray-500 text-sm">1 día</span> -->
                         </div>
-                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Taller de Cocina Tradicional</h3>
+                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Restaurantes</h3>
                         <p class="mt-3 text-base text-gray-500">
-                            Aprende recetas centenarias con ingredientes locales cosechados ese mismo día en la huerta comunitaria.
+                            Disfruta de comidas tradicionales cubanas con un sabor muy peculiar de nuestra cocina.
                         </p>
                         <div class="mt-4 flex items-center justify-between">
-                            <span class="text-lg font-bold text-green-600">$65 USD</span>
+                         <!--   <span class="text-lg font-bold text-green-600">$65 USD</span> -->
                             <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
                         </div>
                     </div>
                 </div>
 
+            
                 <!-- Experience 3 -->
                 <div class="experience-card bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="300">
-                    <img class="w-full h-48 object-cover" src="http://static.photos/people/640x360/303" alt="Artesanía">
+                    <img class="w-full h-48 object-cover" src="images/hotel-moka11.jpg" alt="Alojamiento">
                     <div class="p-6">
                         <div class="flex items-center">
-                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Cultura</span>
-                            <span class="ml-2 text-gray-500 text-sm">2 días</span>
+                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Descanso</span>
+                           <!-- <span class="ml-2 text-gray-500 text-sm">30 minutos</span>-->
                         </div>
-                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Taller de Artesanías</h3>
+                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Alojamiento</h3>
                         <p class="mt-3 text-base text-gray-500">
-                            Crea piezas únicas con técnicas ancestrales usando materiales naturales bajo la guía de maestros artesanos.
+                            Hospedajes únicos te esperan para relajarse entre naturaleza y cultura.
+
+                        <div class="mt-4 flex items-center justify-between">
+                           <!-- <span class="text-lg font-bold text-green-600">$10 USD</span>-->
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Experience 4 -->
+                <div class="experience-card bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="400">
+                    <img class="w-full h-48 object-cover" src="images/kanopy.jpg" alt="Kanopy">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Aventura</span>
+                           <!-- <span class="ml-2 text-gray-500 text-sm">30 minutos</span>-->
+                        </div>
+                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Canopy Tour</h3>
+                        <p class="mt-3 text-base text-gray-500">
+                            Una aventura inolvidable para desafiar sus propios límites. Recorrido por cables de acero aéreos de 1,6 Km de longitud, desde donde se disfruta del paisaje de la Comunidad
                         </p>
                         <div class="mt-4 flex items-center justify-between">
-                            <span class="text-lg font-bold text-green-600">$85 USD</span>
+                           <!-- <span class="text-lg font-bold text-green-600">$10 USD</span>-->
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Experience 5 -->
+                <div class="experience-card bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <img class="w-full h-48 object-cover" src="images/piscinas.jpg" alt="Piscinas">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Refrescante</span>
+                           <!-- <span class="ml-2 text-gray-500 text-sm">30 minutos</span>-->
+                        </div>
+                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Piscinas</h3>
+                        <p class="mt-3 text-base text-gray-500">
+                             Lugar para reconectar con la naturaleza y darse un chapuzón refrescante.
+
+                        <div class="mt-4 flex items-center justify-between">
+                           <!-- <span class="text-lg font-bold text-green-600">$10 USD</span>-->
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Experience 6 -->
+                <div class="experience-card bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <img class="w-full h-48 object-cover" src="images/area-de-acampada.jpg" alt="Área de Acampada">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Cabañas Rústicas</span>
+                           <!-- <span class="ml-2 text-gray-500 text-sm">30 minutos</span>-->
+                        </div>
+                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Área de Acampada</h3>
+                        <p class="mt-3 text-base text-gray-500">
+                             Despierta rodeado de naturaleza pura, el canto de las aves y el susurro del viento entre los árboles.
+
+                        <div class="mt-4 flex items-center justify-between">
+                           <!-- <span class="text-lg font-bold text-green-600">$10 USD</span>-->
                             <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
                         </div>
                     </div>
@@ -197,7 +291,7 @@
             </div>
 
             <div class="mt-12 text-center" data-aos="fade-up">
-                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700">
+                <a href="experiencias.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700">
                     Ver todas las experiencias
                     <i data-feather="arrow-right" class="ml-2"></i>
                 </a>
@@ -205,13 +299,13 @@
         </div>
     </section>
 
-    <!-- Communities Section -->
-    <section id="comunidades" class="py-20 bg-white">
+    <!-- Communiti Section -->
+    <section id="comunidad" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center" data-aos="fade-up">
-                <h2 class="text-base text-green-600 font-semibold tracking-wide uppercase">Comunidades</h2>
+                <h2 class="text-base text-green-600 font-semibold tracking-wide uppercase">Comunidad</h2>
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    Conoce Nuestras Comunidades Aliadas
+                    Conoce Nuestra Comunidad
                 </p>
                 <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
                     Cada comunidad tiene su propia identidad, tradiciones y formas de recibirte como huésped.
@@ -220,34 +314,38 @@
 
             <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                 <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                    <img class="mx-auto h-32 w-32 rounded-full" src="http://static.photos/people/200x200/501" alt="Comunidad Andina">
-                    <h3 class="mt-6 text-lg font-medium text-gray-900">Comunidad Andina</h3>
+                    <img class="mx-auto h-32 w-32 rounded-full" src="images/Reserva-de-la-biosfera.png" alt="Reserva de la Biosfera">
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Reserva de la Biosfera</h3>
                     <p class="mt-2 text-base text-gray-500">
-                        Guardianes de los páramos y conocimientos ancestrales sobre agricultura en altura.
+                        Promueve la convivencia armoniosa entre las comunidades locales y su entorno natural.
+                   <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
                     </p>
                 </div>
 
                 <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                    <img class="mx-auto h-32 w-32 rounded-full" src="http://static.photos/people/200x200/502" alt="Comunidad Amazónica">
-                    <h3 class="mt-6 text-lg font-medium text-gray-900">Comunidad Amazónica</h3>
+                    <img class="mx-auto h-32 w-32 rounded-full" src="images/las-terrazas.jpg" alt="Las Terrazas">
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Las Terrazas</h3>
                     <p class="mt-2 text-base text-gray-500">
-                        Expertos en biodiversidad y medicina tradicional de la selva tropical.
+                        Un destino perfecto para quienes buscan una experiencia auténtica, ecológica y cultural en Cuba.
+                    <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
                     </p>
                 </div>
 
                 <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                    <img class="mx-auto h-32 w-32 rounded-full" src="http://static.photos/people/200x200/503" alt="Comunidad Costera">
-                    <h3 class="mt-6 text-lg font-medium text-gray-900">Comunidad Costera</h3>
+                    <img class="mx-auto h-32 w-32 rounded-full" src="images/polo-montannez.jpg" alt="Polo Montañez">
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Polo Montañez</h3>
                     <p class="mt-2 text-base text-gray-500">
-                        Pescadores artesanales que comparten su conexión con el océano y manglares.
+                       Cantautor autodidacta que se convirtió en un ícono de la música cubana gracias a su estilo auténtico y profundamente campesino.
+                   <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
                     </p>
                 </div>
 
                 <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-                    <img class="mx-auto h-32 w-32 rounded-full" src="http://static.photos/people/200x200/504" alt="Comunidad del Valle">
-                    <h3 class="mt-6 text-lg font-medium text-gray-900">Comunidad del Valle</h3>
+                    <img class="mx-auto h-32 w-32 rounded-full" src="images/artistas-locales.jpg" alt="Artistas Locales">
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Artistas Locales</h3>
                     <p class="mt-2 text-base text-gray-500">
-                        Agricultores orgánicos que mantienen viva la tradición de los mercados campesinos.
+                      Artistas locales han establecido sus estudios en Las Terrazas, integrando el arte con la naturaleza y la sostenibilidad.
+                        <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
                     </p>
                 </div>
             </div>
@@ -356,7 +454,7 @@
                 <div class="ml-3 inline-flex rounded-md shadow">
                     <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-800">
                         <i data-feather="phone" class="mr-2"></i>
-                        +593 99 123 4567
+                        +53 49578700
                     </a>
                 </div>
             </div>
@@ -385,8 +483,8 @@
                                 <i data-feather="map-pin" class="h-6 w-6 text-green-600"></i>
                             </div>
                             <div class="ml-3 text-base text-gray-500">
-                                <p>Av. Amazonas N45-12</p>
-                                <p>Quito, Ecuador</p>
+                                <p>Km 52 ½ Autopista Habana-Pinar del Río</p>
+                                <p>Candelaria, Artemisa, Cuba</p>
                             </div>
                         </div>
                         <div class="flex">
@@ -394,7 +492,7 @@
                                 <i data-feather="mail" class="h-6 w-6 text-green-600"></i>
                             </div>
                             <div class="ml-3 text-base text-gray-500">
-                                <p>hola@ecocomunidad.com</p>
+                                <p>reservas@terrazas.tur.cu</p>
                             </div>
                         </div>
                         <div class="flex">
@@ -402,24 +500,31 @@
                                 <i data-feather="phone" class="h-6 w-6 text-green-600"></i>
                             </div>
                             <div class="ml-3 text-base text-gray-500">
-                                <p>+593 2 123 4567</p>
-                                <p>+593 99 123 4567 (WhatsApp)</p>
+                                <p>+53 49578700</p>
                             </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-lg font-medium text-gray-900">Ubicación</h3>
+                        <div class="mt-4 rounded-lg overflow-hidden h-48">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d387997.47633950337!2d-83.00337739438338!3d22.81353319438936!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2sus!4v1758775622402!5m2!1ses!2sus" 
+                                width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
                         </div>
                     </div>
                     <div class="mt-8">
                         <h3 class="text-lg font-medium text-gray-900">Síguenos</h3>
                         <div class="mt-4 flex space-x-6">
-                            <a href="#" class="text-gray-400 hover:text-green-600">
+                            <a href="https://facebook.com/CubaLasTerrazas" class="text-gray-400 hover:text-green-600">
                                 <i data-feather="facebook" class="h-6 w-6"></i>
                             </a>
-                            <a href="#" class="text-gray-400 hover:text-green-600">
+                            <a href="https://www.instagram.com/lasterrazas_cuba" class="text-gray-400 hover:text-green-600">
                                 <i data-feather="instagram" class="h-6 w-6"></i>
                             </a>
-                            <a href="#" class="text-gray-400 hover:text-green-600">
+                            <a href="https://twitter.com/LasTerrazasCuba" class="text-gray-400 hover:text-green-600">
                                 <i data-feather="twitter" class="h-6 w-6"></i>
                             </a>
-                            <a href="#" class="text-gray-400 hover:text-green-600">
+                            <a href="https://www.youtube.com/channel/UCJjXWSM_c3W2B_oYkOABtsg?view_as=subscriber" class="text-gray-400 hover:text-green-600">
                                 <i data-feather="youtube" class="h-6 w-6"></i>
                             </a>
                         </div>
@@ -469,17 +574,17 @@
                     <ul class="mt-4 space-y-4">
                         <li><a href="#" class="text-base text-gray-400 hover:text-white">Senderismo</a></li>
                         <li><a href="#" class="text-base text-gray-400 hover:text-white">Gastronomía</a></li>
-                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Artesanías</a></li>
-                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Avistamiento</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Alojamiento</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Canopy Tour</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Comunidades</h3>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Comunidad</h3>
                     <ul class="mt-4 space-y-4">
-                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Andina</a></li>
-                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Amazónica</a></li>
-                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Costera</a></li>
-                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Del Valle</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Reserva de la Biosfera</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Las Terrazas</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Polo Montañez</a></li>
+                        <li><a href="#" class="text-base text-gray-400 hover:text-white">Artistas Locales</a></li>
                     </ul>
                 </div>
                 <div>
@@ -503,21 +608,21 @@
             </div>
             <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
                 <div class="flex space-x-6 md:order-2">
-                    <a href="#" class="text-gray-400 hover:text-white">
+                    <a href="https://facebook.com/CubaLasTerrazas" class="text-gray-400 hover:text-white">
                         <i data-feather="facebook" class="h-6 w-6"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
+                    <a href="https://www.instagram.com/lasterrazas_cuba" class="text-gray-400 hover:text-white">
                         <i data-feather="instagram" class="h-6 w-6"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
+                    <a href="https://twitter.com/LasTerrazasCuba" class="text-gray-400 hover:text-white">
                         <i data-feather="twitter" class="h-6 w-6"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
+                    <a href="https://www.youtube.com/channel/UCJjXWSM_c3W2B_oYkOABtsg?view_as=subscriber" class="text-gray-400 hover:text-white">
                         <i data-feather="youtube" class="h-6 w-6"></i>
                     </a>
                 </div>
                 <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-                    &copy; 2023 EcoTurismo Comunitario. Todos los derechos reservados.
+                    &copy; 2025 Complejo Las Terrazas. Todos los derechos reservados.
                 </p>
             </div>
         </div>
@@ -549,6 +654,81 @@
                 icon.setAttribute('data-feather', 'x');
             }
             feather.replace();
+        });
+
+        // Carousel functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            const prevBtn = document.querySelector('.carousel-prev');
+            const nextBtn = document.querySelector('.carousel-next');
+            let currentSlide = 0;
+            let autoSlideInterval;
+
+            function showSlide(index) {
+                // Hide all slides
+                slides.forEach(slide => {
+                    slide.style.opacity = '0';
+                });
+                dots.forEach(dot => {
+                    dot.style.opacity = '0.5';
+                });
+                
+                // Show current slide
+                slides[index].style.opacity = '1';
+                dots[index].style.opacity = '1';
+                
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                let nextIndex = (currentSlide + 1) % slides.length;
+                showSlide(nextIndex);
+            }
+
+            function prevSlide() {
+                let prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(prevIndex);
+            }
+
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(nextSlide, 5000);
+            }
+
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+
+            // Event listeners
+            nextBtn.addEventListener('click', function() {
+                stopAutoSlide();
+                nextSlide();
+                startAutoSlide();
+            });
+
+            prevBtn.addEventListener('click', function() {
+                stopAutoSlide();
+                prevSlide();
+                startAutoSlide();
+            });
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    stopAutoSlide();
+                    const slideIndex = parseInt(this.getAttribute('data-slide'));
+                    showSlide(slideIndex);
+                    startAutoSlide();
+                });
+            });
+
+            // Pause auto slide on hover
+            const carousel = document.querySelector('.carousel-container');
+            carousel.addEventListener('mouseenter', stopAutoSlide);
+            carousel.addEventListener('mouseleave', startAutoSlide);
+
+            // Initialize and start auto slide
+            showSlide(0);
+            startAutoSlide();
         });
     </script>
 </body>
